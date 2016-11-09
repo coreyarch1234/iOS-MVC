@@ -86,4 +86,3 @@ Here are two benefits that you get from this approach:
 
 ![Quick Viewer](./resources/quick-viewer.png "Use Xcode's 'Quick Viewer' to have a nice overview of the file's content")
 
-
