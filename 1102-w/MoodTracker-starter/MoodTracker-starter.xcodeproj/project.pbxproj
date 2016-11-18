@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E184C5C1DD3AB76007EA40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E184C5A1DD3AB76007EA40F /* Main.storyboard */; };
 		55ABB74B1DCD02CC00FB4380 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB74A1DCD02CC00FB4380 /* Mood.swift */; };
 		55ABB74D1DCD02E200FB4380 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB74C1DCD02E200FB4380 /* Friend.swift */; };
 		55C52FA11DD3816900688CC7 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C52FA01DD3816900688CC7 /* AddFriendViewController.swift */; };
 		55CCD2441DCA41EC0087F0C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD2431DCA41EC0087F0C1 /* AppDelegate.swift */; };
-		55CCD2491DCA41EC0087F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CCD2471DCA41EC0087F0C1 /* Main.storyboard */; };
 		55CCD24B1DCA41EC0087F0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55CCD24A1DCA41EC0087F0C1 /* Assets.xcassets */; };
 		55CCD24E1DCA41EC0087F0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CCD24C1DCA41EC0087F0C1 /* LaunchScreen.storyboard */; };
 		55CCD2561DCA427D0087F0C1 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD2551DCA427D0087F0C1 /* FriendsTableViewController.swift */; };
@@ -19,12 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E184C5B1DD3AB76007EA40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../swift/iOS-MVC/1102-w/MoodTracker-starter/MoodTracker-starter/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		55ABB74A1DCD02CC00FB4380 /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mood.swift; path = Model/Mood.swift; sourceTree = "<group>"; };
 		55ABB74C1DCD02E200FB4380 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = Model/Friend.swift; sourceTree = "<group>"; };
 		55C52FA01DD3816900688CC7 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFriendViewController.swift; path = "View Controllers/AddFriendViewController.swift"; sourceTree = "<group>"; };
 		55CCD2401DCA41EC0087F0C1 /* MoodTracker-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoodTracker-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CCD2431DCA41EC0087F0C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55CCD2481DCA41EC0087F0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55CCD24A1DCA41EC0087F0C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55CCD24D1DCA41EC0087F0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55CCD24F1DCA41EC0087F0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 				55CCD2581DCA42900087F0C1 /* View */,
 				55CCD2571DCA42850087F0C1 /* View Controllers */,
 				55CCD2431DCA41EC0087F0C1 /* AppDelegate.swift */,
-				55CCD2471DCA41EC0087F0C1 /* Main.storyboard */,
 				55CCD24A1DCA41EC0087F0C1 /* Assets.xcassets */,
+				0E184C5A1DD3AB76007EA40F /* Main.storyboard */,
 				55CCD24C1DCA41EC0087F0C1 /* LaunchScreen.storyboard */,
 				55CCD24F1DCA41EC0087F0C1 /* Info.plist */,
 			);
@@ -159,9 +159,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E184C5C1DD3AB76007EA40F /* Main.storyboard in Resources */,
 				55CCD24E1DCA41EC0087F0C1 /* LaunchScreen.storyboard in Resources */,
 				55CCD24B1DCA41EC0087F0C1 /* Assets.xcassets in Resources */,
-				55CCD2491DCA41EC0087F0C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,10 +184,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		55CCD2471DCA41EC0087F0C1 /* Main.storyboard */ = {
+		0E184C5A1DD3AB76007EA40F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				55CCD2481DCA41EC0087F0C1 /* Base */,
+				0E184C5B1DD3AB76007EA40F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
