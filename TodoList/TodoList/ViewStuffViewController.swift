@@ -18,16 +18,19 @@ class ViewStuffViewController: UIViewController{
     var delegate: viewStuffViewControllerDelegate!
 //    var delegateUpdate: UpdateStuffViewControllerDelegate!
     var stuffTitle: String?
-    var stuffDeadLine: String?
     var stuffItem: Stuff! 
     @IBOutlet weak var titleOfStuff: UILabel!
     @IBOutlet weak var deadLineOfStuff: UILabel!
+    var stuffDeadLine: String?
     @IBAction func doneButton(_ sender: UIButton) {
+//        stuffItem.deadline = "You are done here!"
         delegate.updateStuffDone(stuff: stuffItem, status: true)
         deadLineOfStuff.text = "You are done here!"
+//        stuffDeadLine = "You are done here!"
     }
 
     @IBAction func unDoneButton(_ sender: UIButton) {
+//        stuffItem.deadline = stuffDeadLine!
         delegate.updateStuffDone(stuff: stuffItem, status: false)
         deadLineOfStuff.text = stuffDeadLine
     }
@@ -38,5 +41,16 @@ class ViewStuffViewController: UIViewController{
         titleOfStuff.text = stuffTitle
         deadLineOfStuff.text = stuffDeadLine
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if stuffItem.buttonStatus == .Done{
+            deadLineOfStuff.text = "You are done here!"
+        }
+        else{
+            deadLineOfStuff.text = stuffDeadLine
+        }
+        super.viewWillAppear(animated)
+        
     }
 }

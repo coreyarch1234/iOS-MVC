@@ -15,6 +15,7 @@ enum Done{
 class Stuff{
     var title: String = ""
     var deadline: String = ""
+    
     var buttonStatus: Done = .NotDone{
         didSet{
             if buttonStatus == .Done{

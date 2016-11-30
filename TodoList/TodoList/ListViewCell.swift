@@ -11,17 +11,23 @@ class ListTableViewCell: UITableViewCell{
     @IBOutlet weak var deadLineLabel: UILabel!
     @IBOutlet weak var checkStatusButton: UIButton!
     @IBAction func checkButtonTapped(_ sender: UIButton) {
+        
+        print("?????")
+        
+        print("\(self.stuff.buttonStatus)")
+        
         if self.stuff.buttonStatus == .NotDone{
             self.stuff.buttonStatus = .Done
             checkStatusButton.setImage(UIImage(named: "checkbox"), for: UIControlState.normal)
-            deadLineLabel.text = "You are done!"
+            deadLineLabel.text = "You are done here!"
             print(" The name of this task is: " + self.stuff.title + " and it is, " + "\(self.stuff.buttonStatus)")
         }
         else{
             self.stuff.buttonStatus = .NotDone
             checkStatusButton.setImage(UIImage(named: "uncheckbox"), for: UIControlState.normal)
             deadLineLabel.text = self.stuff.deadline
-            print(" The name of this task is: " + self.stuff.title + " and it is, " + "\(self.stuff.buttonStatus)")
+            
+            print(" The name of this task is: " + self.stuff.title + " and it is, " + "\(self.stuff.buttonStatus)" + "\(self.stuff.deadline)")
         }
     }
     var stuff: Stuff!{

@@ -32,6 +32,7 @@ class ListTableViewController: UITableViewController, AddStuffViewControllerDele
         }
         else if stuff.buttonStatus == .Done{
             cell.checkStatusButton.setImage(UIImage(named: "checkbox"), for: UIControlState.normal)
+            cell.deadLineLabel.text = "You are done here!"
         }
         return cell
     }
