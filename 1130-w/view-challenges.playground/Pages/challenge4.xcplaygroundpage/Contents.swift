@@ -18,4 +18,34 @@ let colors: [UIColor] = [.green, .gray, .purple, .yellow, .red, .orange, .lightG
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+func canvasGenerator(color: [UIColor]) -> [UIView]{
+    var canvasArray: [UIView] = []
+    let width = 100
+    let height = 100
+    var countColor = 0
+    for countX in 0...2{
+        for countY in 0...2{
+            let canvasElement = UIView(frame: CGRect(x: width * countY, y: height * countX, width: 100, height: 100))
+            canvasElement.backgroundColor = color[countColor]
+            canvasArray.append(canvasElement)
+            canvas.addSubview(canvasElement)
+            countColor += 1
+        }
+    }
+    return canvasArray
+}
+canvasGenerator(color: colors)
+
+
+
+
+
+
+
+
+
+
+
+
+
 

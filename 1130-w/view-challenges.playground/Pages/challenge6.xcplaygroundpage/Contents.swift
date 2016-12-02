@@ -20,4 +20,19 @@ PlaygroundPage.current.liveView = canvas // make the canvas appear in the assist
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+let blueFrame = CGRect(x: 0, y :0, width: 140, height: 140)
+let canvasBlue = UIView(frame: blueFrame)
+canvasBlue.bounds = canvasBlue.frame.insetBy(dx: 20, dy: 20)
+canvasBlue.backgroundColor = .blue
+canvas.addSubview(canvasBlue)
+
+
+
+
+let greenFrame = CGRect(x: 280, y :80, width: 100, height: 100)
+let canvasGreen = UIView(frame: greenFrame)
+//canvasGreen.bounds = canvasGreen.frame.insetBy(dx: 0, dy: 0)
+canvasGreen.backgroundColor = .green
+canvas.addSubview(canvasGreen)
+
 
