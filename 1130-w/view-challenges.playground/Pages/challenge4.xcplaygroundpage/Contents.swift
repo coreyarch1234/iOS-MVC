@@ -6,7 +6,19 @@ let canvas = UIView(frame: canvasFrame)
 canvas.backgroundColor = .white
 PlaygroundPage.current.liveView = canvas // make the canvas appear in the assistant editor
 
-let colors: [UIColor] = [.green, .gray, .purple, .yellow, .red, .orange, .lightGray, .white, .blue]
+var colors: [UIColor] = [.green, .gray, .purple, .yellow, .red, .orange, .lightGray, .white, .blue]
+
+let colorsExtreme: [UIColor] = []
+
+func createColors() -> [UIColor]{
+    let random = Int(arc4random_uniform(UInt32(5)))
+    for number in 0...90{
+            colors.append(colors[random])
+        print("hi")
+        }
+    return colors
+}
+
 
 /*:
  **Task**: Create an even grid on the `canvas`, made out of squares that each are one third as wide and one third as high as the `canvas`.Use the same colors as in the picture (they are already defined for you above in the `colors` array):
@@ -23,10 +35,11 @@ func canvasGenerator(color: [UIColor]) -> [UIView]{
     let width = 100
     let height = 100
     var countColor = 0
-    for countX in 0...2{
-        for countY in 0...2{
+    for countX in 0...9{
+        for countY in 0...9{
             let canvasElement = UIView(frame: CGRect(x: width * countY, y: height * countX, width: 100, height: 100))
-            canvasElement.backgroundColor = color[countColor]
+//            canvasElement.backgroundColor = color[countColor]
+            canvasElement.backgroundColor = createColors()[countColor]
             canvasArray.append(canvasElement)
             canvas.addSubview(canvasElement)
             countColor += 1
