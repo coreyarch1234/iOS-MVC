@@ -6,18 +6,8 @@ let canvas = UIView(frame: canvasFrame)
 canvas.backgroundColor = .white
 PlaygroundPage.current.liveView = canvas // make the canvas appear in the assistant editor
 
-var colors: [UIColor] = [.green, .gray, .purple, .yellow, .red, .orange, .lightGray, .white, .blue]
 
-let colorsExtreme: [UIColor] = []
-
-func createColors() -> [UIColor]{
-    let random = Int(arc4random_uniform(UInt32(5)))
-    for number in 0...90{
-            colors.append(colors[random])
-        print("hi")
-        }
-    return colors
-}
+let colors: [UIColor] = [.green, .gray, .purple, .yellow, .red, .orange, .lightGray, .white, .blue]
 
 
 /*:
@@ -30,16 +20,17 @@ func createColors() -> [UIColor]{
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+
 func canvasGenerator(color: [UIColor]) -> [UIView]{
     var canvasArray: [UIView] = []
     let width = 100
     let height = 100
     var countColor = 0
-    for countX in 0...9{
-        for countY in 0...9{
+    for countX in 0...2{
+        for countY in 0...2{
             let canvasElement = UIView(frame: CGRect(x: width * countY, y: height * countX, width: 100, height: 100))
 //            canvasElement.backgroundColor = color[countColor]
-            canvasElement.backgroundColor = createColors()[countColor]
+            canvasElement.backgroundColor = colors[countColor]
             canvasArray.append(canvasElement)
             canvas.addSubview(canvasElement)
             countColor += 1
@@ -48,15 +39,6 @@ func canvasGenerator(color: [UIColor]) -> [UIView]{
     return canvasArray
 }
 canvasGenerator(color: colors)
-
-
-
-
-
-
-
-
-
 
 
 
