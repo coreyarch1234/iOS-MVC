@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+class BoardViewController: UIViewController{
+    let ticTacToeView = BoardView(tileSize: 75, numberOfTilesInRow: 3, tileColor: .green)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addSubview(ticTacToeView)
+    }
+}
