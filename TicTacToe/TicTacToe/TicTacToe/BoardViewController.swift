@@ -19,9 +19,18 @@ class BoardViewController: UIViewController, BoardViewDelegate{
         ticTacToeView.delegate = self
         self.view.addSubview(ticTacToeView)
     }
+    func isEnded(){
+        if board.gameState == .Ended{
+            ticTacToeView.isUserInteractionEnabled = false
+            let alertAction = UIAlertController(title: "Woohoo!!", message: "\(board.player) + has won!", preferredStyle: UIAlertControllerStyle.alert)
+            alertAction.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertAction, animated: true, completion: nil)
+        }
+    }
     func sendInLocation(x: CGFloat, y: CGFloat) {
         //MARK: Find the cell location of the tap
         let positionTuple = (x, y)
+        
         
         let domainA: Bool = positionTuple.0 >= 0.0 && positionTuple.0 < tileSize
         let rangeA: Bool = positionTuple.1 >= 0.0 && positionTuple.1 < tileSize
@@ -44,31 +53,84 @@ class BoardViewController: UIViewController, BoardViewDelegate{
         
         if domainA && rangeA{
             move = Movement.A
-            ticTacToeView.canvasArray[0].text = board.player
+            if board.player == .circle{
+                ticTacToeView.canvasArray[0].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[0].text = board.playerCrossText
+            }
         }
         else if domainB && rangeB{
             move = Movement.B
+            if board.player == .circle{
+                ticTacToeView.canvasArray[1].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[1].text = board.playerCrossText
+            }
         }
         else if domainC && rangeC{
             move = Movement.C
+            if board.player == .circle{
+                ticTacToeView.canvasArray[2].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[2].text = board.playerCrossText
+            }
         }
         else if domainD && rangeD{
             move = Movement.D
+            if board.player == .circle{
+                ticTacToeView.canvasArray[3].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[3].text = board.playerCrossText
+            }
         }
         else if domainE && rangeE{
             move = Movement.E
+            if board.player == .circle{
+                ticTacToeView.canvasArray[4].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[4].text = board.playerCrossText
+            }
         }
         else if domainF && rangeF{
             move = Movement.F
+            if board.player == .circle{
+                ticTacToeView.canvasArray[5].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[5].text = board.playerCrossText
+            }
         }
         else if domainG && rangeG{
             move = Movement.G
+            if board.player == .circle{
+                ticTacToeView.canvasArray[6].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[6].text = board.playerCrossText
+            }
         }
         else if domainH && rangeH{
             move = Movement.H
+            if board.player == .circle{
+                ticTacToeView.canvasArray[7].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[7].text = board.playerCrossText
+            }
         }
         else if domainI && rangeI{
             move = Movement.I
+            if board.player == .circle{
+                ticTacToeView.canvasArray[8].text = board.playerCircleText
+            }
+            else{
+                ticTacToeView.canvasArray[8].text = board.playerCrossText
+            }
         }
         //MARK: Game movement
         board.Move(move: move)
@@ -78,8 +140,7 @@ class BoardViewController: UIViewController, BoardViewDelegate{
             alertAction.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
             self.present(alertAction, animated: true, completion: nil)
         }
-//        print(board.gameState)
-        
     }
     
+
 }
