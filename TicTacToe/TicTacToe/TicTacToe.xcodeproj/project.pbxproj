@@ -15,6 +15,7 @@
 		0E117AFA1DF88CD30055E28D /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E117AF91DF88CD30055E28D /* Board.swift */; };
 		0E117B001DF88CFC0055E28D /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E117AFF1DF88CFC0055E28D /* BoardViewController.swift */; };
 		0E117B031DF890F70055E28D /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E117B021DF890F70055E28D /* BoardView.swift */; };
+		0ECAD79E1DFB46FF00A59CC9 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAD79D1DFB46FF00A59CC9 /* Square.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0E117AF91DF88CD30055E28D /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		0E117AFF1DF88CFC0055E28D /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		0E117B021DF890F70055E28D /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		0ECAD79D1DFB46FF00A59CC9 /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				0E117B021DF890F70055E28D /* BoardView.swift */,
+				0ECAD79D1DFB46FF00A59CC9 /* Square.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECAD79E1DFB46FF00A59CC9 /* Square.swift in Sources */,
 				0E117AEA1DF88CBF0055E28D /* ViewController.swift in Sources */,
 				0E117AE81DF88CBF0055E28D /* AppDelegate.swift in Sources */,
 				0E117B031DF890F70055E28D /* BoardView.swift in Sources */,
@@ -336,6 +340,7 @@
 				0E117AF81DF88CC00055E28D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

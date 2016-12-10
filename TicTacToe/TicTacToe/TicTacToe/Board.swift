@@ -32,6 +32,8 @@ enum Movement: String{
 struct Board{
     var gameState: GameState = .Ongoing
     var player: Player = .circle
+    var playerCircleText = "O"
+    var playerCrossText = "X"
     var winner: Player!
     var move: Movement = .A
     var crossCount: [String]
