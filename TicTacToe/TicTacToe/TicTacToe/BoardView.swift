@@ -38,6 +38,7 @@ class BoardView: UIView{
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         self.addGestureRecognizer(tap)
         self.isUserInteractionEnabled = true
+        
     }
     func handleTap(sender: UITapGestureRecognizer){
         if sender.state == .ended{

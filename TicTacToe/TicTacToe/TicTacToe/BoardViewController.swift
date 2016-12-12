@@ -19,14 +19,6 @@ class BoardViewController: UIViewController, BoardViewDelegate{
         ticTacToeView.delegate = self
         self.view.addSubview(ticTacToeView)
     }
-    func isEnded(){
-        if board.gameState == .Ended{
-            ticTacToeView.isUserInteractionEnabled = false
-            let alertAction = UIAlertController(title: "Woohoo!!", message: "\(board.player) + has won!", preferredStyle: UIAlertControllerStyle.alert)
-            alertAction.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alertAction, animated: true, completion: nil)
-        }
-    }
     func sendInLocation(x: CGFloat, y: CGFloat) {
         //MARK: Find the cell location of the tap
         let positionTuple = (x, y)
