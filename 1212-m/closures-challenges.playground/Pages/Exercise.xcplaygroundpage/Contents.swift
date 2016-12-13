@@ -27,3 +27,44 @@ sumOfDigits(a: 123) // 6
  7. Write a function called `concatenateSmallStrings` that takes two `String`s and returns an _optional_ `String`. If both input arguments have less than 5 characters, return the two `String`s concatenated, otherwise return `nil`.
  8. Use the `manipulateStrings` function in combination with the `concatenateSmallStrings` and try to concatenate `"abc"` and `"def"` as well as `"abcdef"` and `"ghijkl"`. What do the calls return?
  */
+
+//1
+func doesApply(a: Int, b: Int, myFunc: (Int, Int) -> Bool) -> Bool{
+    return myFunc(a,b)
+}
+
+//2
+func areBothDivisibleByThree(a: Int, b: Int) -> Bool{
+    return ((a + b) % 3 == 0)
+}
+
+//3
+doesApply(a: 47685, b: 344832, myFunc: areBothDivisibleByThree)
+
+//4
+doesApply(a: 85436, b: 53893, myFunc: {(a,b) in ((a + b) % 3) == 0})
+
+//5
+doesApply(a: 85436, b: 53893, myFunc: {(a, b) in (sumOfDigits(a: a) == sumOfDigits(a: b))})
+
+//6
+func manipulateString(a: String, b: String, stringFunc: (String, String) -> String?) -> String?{
+    return stringFunc(a, b)
+}
+
+//7
+func concatenateSmallStrings(a: String, b: String) -> String?{
+    if a.characters.count + b.characters.count < 10{
+        return (a + b)
+    }
+    return nil
+}
+
+//8
+manipulateString(a: "abc", b: "def", stringFunc: concatenateSmallStrings)
+manipulateString(a: "abcdef", b: "ghijkl", stringFunc: concatenateSmallStrings)
+
+
+
+
+
